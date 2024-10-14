@@ -1,0 +1,22 @@
+.collapse-item{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.collapse-title{
+    background: #ff6060;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.collapse-content{
+    padding: 15px 20px;
+    background: #f6f6f6;
+    font-size: 18px;
+}

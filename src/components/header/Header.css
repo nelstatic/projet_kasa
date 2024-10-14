@@ -1,0 +1,35 @@
+header{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35PX 0;
+  }
+  nav .logo{
+    width: 210px;
+  }
+  nav ul{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+  }
+  nav ul li{
+    display: inline-block;
+    padding: 0 4%;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color: black;
+  }
+  .nav-link.active{
+    border-bottom: 1.5px solid black;
+  }
