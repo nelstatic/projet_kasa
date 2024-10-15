@@ -7,7 +7,7 @@ import Footer from './components/footer/Footer.js';
 import Home from './pages/home/Home.js';
 import AboutUs from './pages/aboutus/AboutUs.js';
 import PageLogement from "./pages/pagelogement/PageLogement.js";
-//import Page_erreur from './pages/Page_erreur.js';
+import PageError from "./pages/pageerror/PageError.js";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="/logement/:id" element={<PageLogement />} />
+          <Route path='*' element={<PageError />}/>
         </Routes>
       </main>
       <Footer/>
