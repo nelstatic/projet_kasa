@@ -1,0 +1,21 @@
+.star {
+    color: #E3E3E3;
+    font-size: 24PX;
+    padding-left: 12px;
+
+}
+
+.star-filled {
+    color: #ff6060;
+    font-size: 24PX;
+    padding-left: 12px;
+}
+
+@media only screen and (max-width: 767px){
+    .star{
+        font-size: 12PX;
+    }
+    .star-filled{
+        font-size: 12PX;
+    }
+}

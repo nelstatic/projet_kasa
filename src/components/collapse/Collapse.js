@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import Chartes from "../../data/charte.json";
-
+import { IoIosArrowForward } from "react-icons/io";
 
 // Composant collapse
-const Collapse = () => {
+const Collapse = ({items, title, content}) => {
   // déclaration de l'état pour gérer l'index de la charte active
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -14,17 +13,28 @@ const Collapse = () => {
   };
 
   return (
-    <div className="collapses">
+    <div className="collapse">
       {/* je parcours le tableau avec la methode map */}
-      {Chartes.map((Charte, index) => (
+      {items.map((item, index) => (
         <div key={index} className="collapse-item">
           <div className="collapse-title" onClick={() => handleCollapseClick(index)}>
-            <h3>{Charte.title}</h3>
+            {/* si title est une chaîne on l'affiche direct sinon on accède à la clé dans l'objet */}
+            <h3>{typeof title === 'string' && item[title] === undefined ? title : item[title]}</h3>
+            <IoIosArrowForward className={`collapse-icon ${activeIndex === index ? 'rotate' : ''}`} />
           </div>
           {/* contenu affiché seulement si la charte est active */}
           {activeIndex === index && (
             <div className="collapse-content">
-              <p>{Charte.content}</p>
+              {/*si jamais on a un tableau on va boucler dessus pour en lister le contenu sinon simple texte*/}
+              {Array.isArray(item[content]) ? (
+                <ul>
+                  {item[content].map((content, i) => (
+                    <li key={i}>{content}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{item[content]}</p>
+              )}
             </div>
           )}
         </div>

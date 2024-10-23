@@ -33,3 +33,22 @@ header{
   .nav-link.active{
     border-bottom: 1.5px solid black;
   }
+
+  @media only screen and (max-width: 767px){
+    header{
+      max-width: 335px;
+      margin: 0 auto;
+    }
+
+    nav{
+      padding: 20PX 0;
+    }
+
+    nav .logo{
+      width: 145px;
+    }
+
+    nav ul li{
+      font-size: 12px;
+    }
+  }

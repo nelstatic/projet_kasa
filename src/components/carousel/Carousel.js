@@ -1,5 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Carousel=({slides})=>{
   const[currentIndex, setCurrentIndex]=useState(0);//initialise la slide courante à 0
@@ -20,14 +22,12 @@ const Carousel=({slides})=>{
     <div>
       
       <div className="carousel">
-        <button onClick={prevSlide} className="left-arrow"> ← </button>
-
        {/* affiche la slide actuelle */}
         <div className="slide">
-         <img src={slides[currentIndex]} alt={`slide ${currentIndex}`}/>
+          <button onClick={prevSlide} className="arrow left-arrow"> <IoIosArrowBack/> </button>
+          <img src={slides[currentIndex]} alt={`slide ${currentIndex}`}/>
+          <button onClick={nextSlide} className="arrow right-arrow"> <IoIosArrowForward/> </button>
         </div>
-
-        <button onClick={nextSlide} className="right-arrow"> → </button>
       </div>
 
     </div>

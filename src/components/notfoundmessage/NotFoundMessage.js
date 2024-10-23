@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 
 const NotFoundMessage=()=>{
     return(
-        <h1>Erreur 404</h1>
+        <div>
+            <h1>Erreur 404</h1>
+            <Link to={"/"}>Retour accueil</Link>
+        </div>
     );
 }
 

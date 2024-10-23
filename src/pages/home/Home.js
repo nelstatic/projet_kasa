@@ -13,17 +13,6 @@ function Home() {
         <CardsDisplay/>
       </div>
     );
-  }
+}
 
-export default Home
-
-/*   const Home = () => {
-    return (
-      <div>
-        <section1 />
-        <section2 />
-      </div>
-    );
-  }; */
-
-// 2 composants : image banniere + les cards 
+export default Home;

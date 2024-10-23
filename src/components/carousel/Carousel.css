@@ -1,0 +1,56 @@
+.carousel{
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    background: none;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.left-arrow{
+    left: 15PX;
+    top: 45%;
+}
+
+.right-arrow{
+    right: 15PX;
+    top: 45%;
+}
+
+.slide img{
+    width: 100%;
+    height: 440PX;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 767px){
+    .slide img{
+        HEIGHT: 240PX;
+    }
+
+    .arrow{
+        font-size: 25px;
+    }
+
+    .left-arrow{
+        left: 8PX;
+    }
+    
+    .right-arrow{
+        right: 8PX;
+    }
+}

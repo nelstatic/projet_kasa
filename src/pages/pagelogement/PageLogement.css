@@ -1,0 +1,92 @@
+.infos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infos-bloc1{
+    display: grid;
+    gap: 10PX;
+    text-align: left;
+    align-items: center;
+    padding-bottom: 15px;
+    max-width: 50%;
+}
+
+.infos-bloc1 .nom-location{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.infos-bloc1 .nom-location h1{
+    font-size: 36px;
+    font-weight: 500;
+    color: #ff6060;
+    padding: 10PX 0;
+}
+.infos-bloc1 .nom-location p{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.tags ul{
+    padding: 15px 0;
+    display: inline-block;
+    list-style: none;
+}
+.tags ul li{
+    padding: 5PX;
+    border-radius: 10px;
+    background: #ff6060;
+    color: white;
+    margin-right: 7px;
+    font-size: 14PX;
+}
+
+.infos-bloc2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15PX 0;
+}
+
+.infos-collapses{
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapse{
+    flex-basis: 48%;
+}
+
+@media only screen and (max-width: 767px) {
+    .infos{
+        display: grid;
+    }
+
+    .infos-bloc1{
+        max-width: 100%;
+    }
+
+    .tags ul li{
+        font-size: 10PX;
+    }
+
+    .infos-bloc1 .nom-location h1{
+        font-size: 18px;
+    }
+    .infos-bloc1 .nom-location p{
+        font-size: 14px;
+    }
+
+    .infos-bloc2{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 335PX;
+    }
+
+    .infos-collapses{
+        flex-direction: column;
+    }
+}
