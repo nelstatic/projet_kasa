@@ -3,10 +3,10 @@ import { IoIosArrowForward } from "react-icons/io";
 
 // Composant collapse
 const Collapse = ({items, title, content}) => {
-  // déclaration de l'état pour gérer l'index de la charte active
+  // déclaration de l'état pour gérer l'index de l'item actif
   const [activeIndex, setActiveIndex] = useState(null);
 
-  // fonction pour ouvrir/fermer une charte
+  // fonction pour ouvrir/fermer un item
   const handleCollapseClick = (index) => {
     // Si l'index est déjà actif, on le ferme, sinon on l'ouvre
     setActiveIndex(index === activeIndex ? null : index);

@@ -1,23 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('components/card/Card.css');
-@import url('components/collapse/Collapse.css');
-@import url('components/footer/Footer.css');
-@import url('components/header/Header.css');
-@import url('pages/aboutus/AboutUs.css');
-@import url('pages/home/Home.css');
-@import url('components/card/Card.css');
-@import url('components/cardsdisplay/CardsDisplay.css');
-@import url('components/ratingstars/RatingStars.css');
-@import url('components/carousel/Carousel.css');
-@import url('pages/pagelogement/PageLogement.css');
-@import url('components/landlordinfo/LandlordInfos.css');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("components/card/Card.css");
+@import url("components/collapse/Collapse.css");
+@import url("components/footer/Footer.css");
+@import url("components/header/Header.css");
+@import url("pages/aboutus/AboutUs.css");
+@import url("pages/home/Home.css");
+@import url("components/card/Card.css");
+@import url("components/cardsdisplay/CardsDisplay.css");
+@import url("components/ratingstars/RatingStars.css");
+@import url("components/carousel/Carousel.css");
+@import url("pages/pagelogement/PageLogement.css");
+@import url("components/landlordinfo/LandlordInfos.css");
+@import url("components/notfoundmessage/NotFoundMassage.css");
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   outline: solid 1px green;
-  --red-color: #FF6060;
+  --red-color: #ff6060;
 }
 
 main {
@@ -27,7 +28,6 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
-  
   main {
     max-width: 335px;
     padding: 0;
