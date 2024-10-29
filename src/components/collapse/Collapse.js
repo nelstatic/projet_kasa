@@ -18,12 +18,7 @@ const Collapse = ({ title, content }) => {
             className={`collapse-icon ${isOpen ? "rotate" : ""}`}
           />
         </div>
-        {isOpen && (
-          <div className="collapse-content">
-            {/* Affiche directement le contenu passé en prop */}
-            {content}
-          </div>
-        )}
+        {isOpen && <div className="collapse-content">{content}</div>}
       </div>
     </div>
   );
