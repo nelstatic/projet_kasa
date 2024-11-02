@@ -5,23 +5,27 @@ import PageError from "../page-error/PageError.js";
 import RatingStars from "../../components/rating-stars/RatingStars.js";
 import LandlordInfo from "../../components/landlord-info/LandlordInfo.js";
 import Collapse from "../../components/collapse/Collapse.js";
+import React from "react";
 
 function HousingPage() {
   const { id } = useParams();
   const logement = Logements.find((logement) => logement.id === id);
+  //Si aucun logement trouvé, on renvoie la page erreur
   if (!logement) {
-    //Si logement n'existe pas aucun id ne sera renvoyé
     return <PageError />;
   }
 
+  //Construit une liste des équipements d'un logement
+
   const equipmentList = (
-    // car cette propritété qu'on recup dans un objet du tableau est elle-même un tableau
     <ul>
-      {logement.equipments.map((item, index) => (
-        <li key={index} className="tag">
-          {item}
-        </li>
-      ))}
+      <React.Fragment>
+        {logement.equipments.map((item, index) => (
+          <li key={`${item}-${index}`} className="tag">
+            {item}
+          </li>
+        ))}
+      </React.Fragment>
     </ul>
   );
 
@@ -36,13 +40,15 @@ function HousingPage() {
             <p>{logement.location}</p>
           </div>
           <div className="tags">
-            {logement.tags.map((tag, index) => (
-              <ul>
-                <li key={index} className="tag">
-                  {tag}
-                </li>
-              </ul>
-            ))}
+            <ul>
+              <React.Fragment>
+                {logement.tags.map((tag, index) => (
+                  <li key={`${tag}-${index}`} className="tag">
+                    {tag}
+                  </li>
+                ))}
+              </React.Fragment>
+            </ul>
           </div>
         </div>
 

@@ -18,7 +18,9 @@ const Collapse = ({ title, content }) => {
             className={`collapse-icon ${isOpen ? "rotate" : ""}`}
           />
         </div>
-        {isOpen && <div className="collapse-content">{content}</div>}
+        <div className={`collapse-content ${isOpen ? "open" : ""}`}>
+          {isOpen && content}
+        </div>
       </div>
     </div>
   );

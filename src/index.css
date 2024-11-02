@@ -7,11 +7,11 @@
 @import url("pages/home/Home.css");
 @import url("components/card/Card.css");
 @import url("components/cards-display/CardsDisplay.css");
-@import url("components/ratingstars/RatingStars.css");
+@import url("components/rating-stars/RatingStars.css");
 @import url("components/carousel/Carousel.css");
-@import url("pages/housingpage/HousingPage.css");
-@import url("components/landlordinfo/LandlordInfos.css");
-@import url("components/notfoundmessage/NotFoundMassage.css");
+@import url("pages/housing-page/HousingPage.css");
+@import url("components/landlord-info/LandlordInfos.css");
+@import url("components/not-found-message/NotFoundMassage.css");
 
 * {
   margin: 0;

@@ -5,13 +5,9 @@ import Card from "../card/Card";
 const CardsDisplay = () => {
   return (
     <div className="cards-display">
-      {Logements.slice(0, 6).map((Logement) => (
-        <Link to={`/logement/${Logement.id}`}>
-          <Card
-            key={Logement.id}
-            cover={Logement.cover}
-            title={Logement.title}
-          />
+      {Logements.map((Logement) => (
+        <Link to={`/logement/${Logement.id}`} key={Logement.id}>
+          <Card cover={Logement.cover} title={Logement.title} />
         </Link>
       ))}
     </div>

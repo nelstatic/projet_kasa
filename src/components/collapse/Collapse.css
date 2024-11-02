@@ -1,61 +1,69 @@
-.collapse-item{
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-    margin: 0 auto;
+.collapse-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
-.collapse-title{
-    background: #ff6060;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 24px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.collapse-title {
+  background: #ff6060;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .collapse-icon {
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 .collapse-icon.rotate {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
-.collapse-content{
-    padding: 15px 20px;
-    background: #f6f6f6;
-    font-size: 18px;
-    font-weight: 500;
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background: #f6f6f6;
+  font-size: 18px;
+  font-weight: 500;
+  transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-.collapse-content ul{
-    list-style: none;
+.collapse-content.open {
+  max-height: 500px;
+  padding: 15px 20px;
 }
 
-.collapse-content ul li{
-    text-align: left;
+.collapse-content ul {
+  list-style: none;
 }
 
-.collapse-content ul :nth-child(2){
-    padding-left: 0;
+.collapse-content ul li {
+  text-align: left;
 }
 
-@media only screen and (max-width: 767px){
-    .collapse-title{
-        font-size: 13px;
-    }
-    .collapse-item{
-        padding: 10px 0;
-    }
+.collapse-content ul :nth-child(2) {
+  padding-left: 0;
+}
 
-    .collapse-content{
-        font-size: 12PX;
-    }
+@media only screen and (max-width: 767px) {
+  .collapse-title {
+    font-size: 13px;
+  }
+  .collapse-item {
+    padding: 10px 0;
+  }
 
-    .collapse-content ul li{
-        font-size: 12PX;
-    }
+  .collapse-content {
+    font-size: 12px;
+  }
+
+  .collapse-content ul li {
+    font-size: 12px;
+  }
 }

@@ -32,7 +32,7 @@
 
 .tags ul {
   padding: 15px 0;
-  display: inline-block;
+  display: flex;
   list-style: none;
 }
 .tags ul li {
