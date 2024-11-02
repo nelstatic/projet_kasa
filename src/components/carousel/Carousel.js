@@ -31,6 +31,10 @@ const Carousel = ({ slides }) => {
 
           <img src={slides[currentIndex]} alt={`slide ${currentIndex}`} />
 
+          <div className="slide-number">
+            {currentIndex + 1} / {slides.length}
+          </div>
+
           {slides.length > 1 && (
             <button onClick={nextSlide} className="arrow right-arrow">
               {" "}
