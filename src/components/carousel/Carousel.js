@@ -22,15 +22,21 @@ const Carousel = ({ slides }) => {
     <div>
       <div className="carousel">
         <div className="slide">
-          <button onClick={prevSlide} className="arrow left-arrow">
-            {" "}
-            <IoIosArrowBack />{" "}
-          </button>
+          {slides.length > 1 && (
+            <button onClick={prevSlide} className="arrow left-arrow">
+              {" "}
+              <IoIosArrowBack />{" "}
+            </button>
+          )}
+
           <img src={slides[currentIndex]} alt={`slide ${currentIndex}`} />
-          <button onClick={nextSlide} className="arrow right-arrow">
-            {" "}
-            <IoIosArrowForward />{" "}
-          </button>
+
+          {slides.length > 1 && (
+            <button onClick={nextSlide} className="arrow right-arrow">
+              {" "}
+              <IoIosArrowForward />{" "}
+            </button>
+          )}
         </div>
       </div>
     </div>
