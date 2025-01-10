@@ -11,14 +11,14 @@ import PageError from "./pages/page-error/PageError.js";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/projet_kasa">
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="aboutus" element={<AboutUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/logement/:id" element={<HousingPage />} />
-          <Route path="*" element={<PageError />} />
+          <Route path="/*" element={<PageError />} />
         </Routes>
       </main>
       <Footer />
